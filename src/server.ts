@@ -1,11 +1,17 @@
 import 'reflect-metadata';
 import 'express-async-errors';
+
+import * as dotenv from 'dotenv';
 import express, { NextFunction, Request, Response } from 'express';
 
 import { router } from './routes';
 import { AppException } from './exceptions/AppException';
 
 import './database';
+
+
+
+dotenv.config();
 
 const app = express();
 

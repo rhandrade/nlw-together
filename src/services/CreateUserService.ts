@@ -26,7 +26,7 @@ class CreateUserService{
             throw new AppException({ message: 'User already exists' });
         }
 
-        const passwordHash = await hash(password, 8);
+        const passwordHash = await hash(password, process.env.PASSWORD_SALT);
 
         const user = usersRepository.create({
             name, 

@@ -31,7 +31,7 @@ class AutheticateUserService{
                 email: user.email, 
                 name : user.name
             }, 
-            '8b7dcc5f7f69fef0972bb6751a52d8aa',
+            process.env.SECRET_TOKEN,
             {
                 subject: user.id,
                 expiresIn: '1d'
